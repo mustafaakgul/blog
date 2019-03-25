@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Tags</title>
+</head>
+<body>
+<form th:action="@{/tags}" th:object="${tagForm}" th:method="post">
+    <table>
+        <tr>
+            <td>Tag name:</td>
+            <td><input type="text" th:field="*{tagName}" /></td>
+            <td th:if="${#fields.hasErrors('tagName')}" th:errors="*{tagName}">Item Type Error will appear here</td>
+        </tr>
+        <tr>
+            <td><button type="submit">Add</button></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="tr"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+
+    <tr th:each="tag : ${tags}">
+
+        <td th:text="${tag.tag}">Item code will appear here</td>
+    </tr>
+</table>
+</body>
+</html>

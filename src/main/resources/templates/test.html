@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="tr"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+</head>
+<body>
+<select th:field="*{tags}">
+    <option
+            th:each="dropdownValue: ${tags}"
+            th:value="${dropdownValue.tag}"
+            th:text="${dropdownValue.tag}" ></option>
+</select>
+</body>
+</html>
